@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://csyw7k288spni"]
+
+[ext_resource type="Texture2D" uid="uid://buw63tmj7i6bx" path="res://Assets/Letters/PNG/Blue/letter_A.png" id="1_kak2e"]
+[ext_resource type="Script" path="res://Objects/Letter/letter.gd" id="2_rxki5"]
+
+[node name="Letter" type="TextureRect"]
+texture = ExtResource("1_kak2e")
+script = ExtResource("2_rxki5")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

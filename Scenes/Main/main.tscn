@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://0mqf40jvu6l"]
+
+[ext_resource type="Script" path="res://Scenes/Main/main.gd" id="1_g0gw1"]
+[ext_resource type="PackedScene" uid="uid://drtcdr3fh0ra5" path="res://Objects/Word/word.tscn" id="2_thwq7"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g0gw1")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(0.5, 0.5)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TargetWord" parent="VBoxContainer" instance=ExtResource("2_thwq7")]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 2
