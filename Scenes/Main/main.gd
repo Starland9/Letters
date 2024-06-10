@@ -20,7 +20,8 @@ func _ready():
 	pass
 
 func _init_target_word_node():
-	var word = target_word_node.init_from_stars(_target_word.length(), _target_word)
+
+	var word = target_word_node.init_from_stars(_target_word)
 	_update_cam_zoom_by_target_word_size(word)
 
 func _update_cam_zoom_by_target_word_size(word: String):

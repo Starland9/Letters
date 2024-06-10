@@ -19,13 +19,14 @@ func init_word(word: String):
 		letter_node.init_from_assets(0, letter)
 		letters_container.add_child(letter_node)
 
-func init_from_stars(count: int, target_word: String) -> String:
+func init_from_stars(target_word: String) -> String:
 	_clear_letter_container()
 	_set_word("")
 	_target_word = target_word
-	for i in count:
+	for i in target_word.length():
 		var letter_node := _letter_scene.instantiate()
 		letter_node.init_from_assets(0, "*")
+		letter_node.set_hidden_letter(target_word[i])
 		letters_container.add_child(letter_node)
 		_word += "*"
 
