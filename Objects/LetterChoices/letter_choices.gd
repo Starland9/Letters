@@ -1,7 +1,7 @@
 extends Control
 class_name LetterChoices
 
-signal letter_pressed(letter: String)
+signal letter_pressed(letter: Letter)
 
 @onready var grid = $GridContainer
 
@@ -37,15 +37,19 @@ func _clear():
     for child in grid.get_children():
         child.queue_free()
 
-func _on_letter_pressed(letter: String):
+func _on_letter_pressed(letter: Letter):
     letter_pressed.emit(letter)
 
-func remove_letter(letter: String):
+func remove_letter(letter: Letter):
+    _letters.erase(letter.get_letter())
+    _init_choices_container()
+
+func _remove_letter_string(letter: String):
     _letters.erase(letter)
     _init_choices_container()
 
 func remove_unused_letter(word: String, target_word: String):
     for letter in word:
         if target_word.contains(letter):
-            remove_letter(letter)
+            _remove_letter_string(letter)
             break

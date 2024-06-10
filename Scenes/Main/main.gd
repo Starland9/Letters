@@ -36,8 +36,8 @@ func _init_chooser():
 	chooser.init_from_string(_target_word)
 	chooser.letter_pressed.connect(_on_letter_choices_letter_pressed)
 
-func _set_letter_in_current_word(letter: String):
-	_current_word = target_word_node.set_letter(letter)
+func _set_letter_in_current_word(letter: Letter):
+	_current_word = target_word_node.set_letter(letter.get_letter())
 	_update_target_word()
 	chooser.remove_letter(letter)
 

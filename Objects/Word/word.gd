@@ -14,7 +14,8 @@ func init_word(word: String):
 	_clear_letter_container()
 	_set_word(word)
 	for letter in word:
-		var letter_node := _letter_scene.instantiate()
+		var letter_node: Letter = _letter_scene.instantiate()
+		letter_node.disable_drag()
 		letter_node.init_from_assets(0, letter)
 		letters_container.add_child(letter_node)
 

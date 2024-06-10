@@ -1,12 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://csyw7k288spni"]
+[gd_scene load_steps=4 format=3 uid="uid://csyw7k288spni"]
 
 [ext_resource type="Texture2D" uid="uid://buw63tmj7i6bx" path="res://Assets/Letters/PNG/Blue/letter_A.png" id="1_kak2e"]
 [ext_resource type="Script" path="res://Objects/Letter/letter.gd" id="2_rxki5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jotnf"]
+size = Vector2(253, 251)
 
 [node name="Letter" type="TextureRect"]
 offset_right = 256.0
 offset_bottom = 256.0
 texture = ExtResource("1_kak2e")
 script = ExtResource("2_rxki5")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(130.5, 125.5)
+shape = SubResource("RectangleShape2D_jotnf")
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
