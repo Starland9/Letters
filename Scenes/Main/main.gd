@@ -10,7 +10,7 @@ signal target_word_node_updated(size: int)
 
 const ZOOM_FACTOR = 3.5
 
-var _target_word = "Banane"
+var _target_word = "informatique"
 var _current_word = ""
 
 func _ready():
@@ -35,7 +35,7 @@ func _center_cam():
 
 func _init_chooser():
 	chooser.init_from_string(_target_word)
-	chooser.letter_pressed.connect(_on_letter_choices_letter_pressed)
+	#chooser.letter_pressed.connect(_on_letter_choices_letter_pressed)
 
 func _set_letter_in_current_word(letter: Letter):
 	_current_word = target_word_node.set_letter(letter.get_letter())

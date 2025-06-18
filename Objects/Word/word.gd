@@ -39,7 +39,7 @@ func _clear_letter_container():
 
 func _set_word(word):
 	_word = word
-	
+
 func get_word() -> String:
 	return _word
 
@@ -52,11 +52,11 @@ func isAllStars() -> bool:
 func _get_letter_index_in_target_word(start_index: int, letter: String) -> int:
 	if start_index >= _target_word.length():
 		return - 1
-		
+
 	var target_idx = _target_word.find(letter, start_index)
 	if target_idx < 0:
 		return - 1
-	
+
 	if _word[target_idx] == "*":
 		return target_idx
 	else:

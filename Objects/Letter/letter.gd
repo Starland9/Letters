@@ -24,7 +24,7 @@ func _ready():
 ## init letter from assets
 func init_from_assets(style_key: int, letter_name: String):
 	var style_name = Manager.letterStyles.keys()[style_key]
-	
+
 	_letter = letter_name
 	_style = style_name
 
@@ -32,7 +32,7 @@ func init_from_assets(style_key: int, letter_name: String):
 			texture = load(LETTERS_PATH + style_name.capitalize() + "/letter.png")
 			modulate.a = BASE_MODULATE_A
 			return
-			
+
 	texture = load(LETTERS_PATH + style_name.capitalize() + "/letter_" + letter_name.to_upper() + ".png")
 
 func _on_gui_input(event: InputEvent):

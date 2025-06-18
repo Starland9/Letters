@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://drtcdr3fh0ra5"]
 
-[ext_resource type="Script" path="res://Objects/Word/word.gd" id="1_pxk1d"]
+[ext_resource type="Script" uid="uid://bv2fu0u11uyiy" path="res://Objects/Word/word.gd" id="1_pxk1d"]
 
 [node name="Word" type="Control"]
 layout_mode = 3
