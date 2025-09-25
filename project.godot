@@ -11,18 +11,23 @@ config_version=5
 [application]
 
 config/name="Letters"
-run/main_scene="res://Scenes/Main/main.tscn"
-config/features=PackedStringArray("4.4", "GL Compatibility")
+run/main_scene="res://scenes/main/main.tscn"
+config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Manager="*res://Autoloads/Manager.gd"
+Manager="*res://autoloads/manager.gd"
+Utils="*res://autoloads/utils.gd"
 
 [display]
 
+window/size/viewport_width=750
+window/size/viewport_height=1500
+window/size/initial_position_type=3
 window/stretch/mode="canvas_items"
-window/stretch/aspect="keep_height"
+window/stretch/aspect="keep_width"
+window/handheld/orientation=5
 
 [rendering]
 

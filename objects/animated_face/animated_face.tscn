@@ -1,0 +1,91 @@
+[gd_scene load_steps=15 format=3 uid="uid://bwforbq1ncp7k"]
+
+[ext_resource type="Texture2D" uid="uid://c2bv3ewiue83q" path="res://assets/animated_face/annoyed_face_base.svg" id="1_k5572"]
+[ext_resource type="Texture2D" uid="uid://ky6uyn05pgrt" path="res://assets/animated_face/annoyed_face_blink1.svg" id="1_qbd41"]
+[ext_resource type="Texture2D" uid="uid://ci2j6nst1r5m3" path="res://assets/animated_face/annoyed_face_blink2.svg" id="2_ypsru"]
+[ext_resource type="Texture2D" uid="uid://dvtkdr3f34lfm" path="res://assets/animated_face/annoyed_face_stare1.svg" id="4_fa6kk"]
+[ext_resource type="Texture2D" uid="uid://dd3x7kfydo3fs" path="res://assets/animated_face/annoyed_face_stare2.svg" id="5_iw8tk"]
+[ext_resource type="Texture2D" uid="uid://dmeg4e5mmcj8d" path="res://assets/animated_face/annoyed_face_stare3.svg" id="6_mpyng"]
+[ext_resource type="Texture2D" uid="uid://cojxdjxnav2b4" path="res://assets/animated_face/happy_face_blink1.svg" id="7_4gpk0"]
+[ext_resource type="Texture2D" uid="uid://cm3ikw3vwimmk" path="res://assets/animated_face/happy_face_blink2.svg" id="8_ggoyx"]
+[ext_resource type="Texture2D" uid="uid://cnq1aeqr6bcad" path="res://assets/animated_face/happy_face_base.svg" id="9_2iato"]
+[ext_resource type="Texture2D" uid="uid://dq1w87ce2pkd" path="res://assets/animated_face/happy_face_joy1.svg" id="10_4gpk0"]
+[ext_resource type="Texture2D" uid="uid://bv7lt6vkxxpgs" path="res://assets/animated_face/happy_face_joy2.svg" id="11_ggoyx"]
+[ext_resource type="Texture2D" uid="uid://cx15ghgl2in2x" path="res://assets/animated_face/happy_face_joy3.svg" id="12_2iato"]
+[ext_resource type="Script" uid="uid://dl17w6mvqdc5u" path="res://objects/animated_face/animated_face.gd" id="13_ggoyx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dcink"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qbd41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ypsru")
+}],
+"loop": false,
+"name": &"annoyed_blink",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_k5572")
+}],
+"loop": true,
+"name": &"annoyed_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_fa6kk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_iw8tk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mpyng")
+}],
+"loop": false,
+"name": &"annoyed_stare",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_4gpk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ggoyx")
+}],
+"loop": false,
+"name": &"happy_blink",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_2iato")
+}],
+"loop": true,
+"name": &"happy_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_4gpk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ggoyx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_2iato")
+}],
+"loop": false,
+"name": &"happy_joy",
+"speed": 5.0
+}]
+
+[node name="AnimatedFace" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_dcink")
+animation = &"happy_joy"
+frame = 2
+frame_progress = 1.0
+script = ExtResource("13_ggoyx")

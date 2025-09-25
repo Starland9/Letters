@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d173a3actjudm"
-path="res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+uid="uid://cx15ghgl2in2x"
+path="res://.godot/imported/happy_face_joy3.svg-d8ac00fd9e9b03e3be0b87456974c66a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icon.svg"
-dest_files=["res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"]
+source_file="res://assets/animated_face/happy_face_joy3.svg"
+dest_files=["res://.godot/imported/happy_face_joy3.svg-d8ac00fd9e9b03e3be0b87456974c66a.ctex"]
 
 [params]
 

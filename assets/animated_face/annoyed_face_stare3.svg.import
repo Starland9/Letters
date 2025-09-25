@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d173a3actjudm"
-path="res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+uid="uid://dmeg4e5mmcj8d"
+path="res://.godot/imported/annoyed_face_stare3.svg-fef33c7bb7ffd4024d822d3a9ff42b24.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icon.svg"
-dest_files=["res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"]
+source_file="res://assets/animated_face/annoyed_face_stare3.svg"
+dest_files=["res://.godot/imported/annoyed_face_stare3.svg-fef33c7bb7ffd4024d822d3a9ff42b24.ctex"]
 
 [params]
 
